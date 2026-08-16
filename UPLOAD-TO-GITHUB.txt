@@ -1,0 +1,28 @@
+VERTEX ELECTRONICS — GITHUB UPLOAD
+
+IMPORTANT:
+Do NOT upload the ZIP file itself to GitHub.
+Extract this folder first, then upload ALL files and folders inside it to the repository root.
+
+The repository root must contain:
+app.py
+requirements.txt
+Procfile
+Dockerfile
+render.yaml
+README.md
+.gitignore
+static/
+templates/
+
+The static/ folder contains the website styling and Vertex showcase image.
+The templates/ folder contains all customer pages and the admin dashboard.
+
+After uploading, return to Render and select the GitHub repository.
+Build command: pip install -r requirements.txt
+Start command: gunicorn app:app
+
+Set these Render environment variables before going live:
+ADMIN_USER = your chosen admin username
+ADMIN_PASS = a strong password
+SECRET_KEY = a long random secret (or use Render's generated value)
